@@ -866,7 +866,7 @@ proto._create = function() {
     onEnd: {}
   };
 
-  this.css({
+  this.css' %}({
     position: 'absolute'
   });
 };
@@ -887,7 +887,7 @@ proto.getSize = function() {
  * apply CSS styles to element
  * @param {Object} style
  */
-proto.css = function( style ) {
+proto.css' %} = function( style ) {
   var elemStyle = this.element.style;
 
   for ( var prop in style ) {
@@ -954,7 +954,7 @@ proto.layoutPosition = function() {
   // reset other property
   style[ yResetProperty ] = '';
 
-  this.css( style );
+  this.css' %}( style );
   this.emitEvent( 'layout', [ this ] );
 };
 
@@ -1032,7 +1032,7 @@ proto.setPosition = function( x, y ) {
 
 // non transition, just trigger callback
 proto._nonTransition = function( args ) {
-  this.css( args.to );
+  this.css' %}( args.to );
   if ( args.isCleaning ) {
     this._removeStyles( args.to );
   }
@@ -1072,7 +1072,7 @@ proto.transition = function( args ) {
 
   // set from styles
   if ( args.from ) {
-    this.css( args.from );
+    this.css' %}( args.from );
     // force redraw. http://blog.alexmaccaw.com/css-transitions
     var h = this.element.offsetHeight;
     // hack for JSHint to hush about unused var
@@ -1081,7 +1081,7 @@ proto.transition = function( args ) {
   // enable transition
   this.enableTransition( args.to );
   // set styles that are transitioning
-  this.css( args.to );
+  this.css' %}( args.to );
 
   this.isTransitioning = true;
 
@@ -1117,7 +1117,7 @@ proto.enableTransition = function(/* style */) {
   var duration = this.layout.options.transitionDuration;
   duration = typeof duration == 'number' ? duration + 'ms' : duration;
   // enable transition styles
-  this.css({
+  this.css' %}({
     transitionProperty: transitionProps,
     transitionDuration: duration,
     transitionDelay: this.staggerDelay || 0
@@ -1189,7 +1189,7 @@ proto._removeStyles = function( style ) {
   for ( var prop in style ) {
     cleanStyle[ prop ] = '';
   }
-  this.css( cleanStyle );
+  this.css' %}( cleanStyle );
 };
 
 var cleanTransitionStyle = {
@@ -1200,7 +1200,7 @@ var cleanTransitionStyle = {
 
 proto.removeTransitionStyles = function() {
   // remove transition
-  this.css( cleanTransitionStyle );
+  this.css' %}( cleanTransitionStyle );
 };
 
 // ----- stagger ----- //
@@ -1216,7 +1216,7 @@ proto.stagger = function( delay ) {
 proto.removeElem = function() {
   this.element.parentNode.removeChild( this.element );
   // remove display: none
-  this.css({ display: '' });
+  this.css' %}({ display: '' });
   this.emitEvent( 'remove', [ this ] );
 };
 
@@ -1237,7 +1237,7 @@ proto.remove = function() {
 proto.reveal = function() {
   delete this.isHidden;
   // remove display: none
-  this.css({ display: '' });
+  this.css' %}({ display: '' });
 
   var options = this.layout.options;
 
@@ -1282,7 +1282,7 @@ proto.hide = function() {
   // set flag
   this.isHidden = true;
   // remove display: none
-  this.css({ display: '' });
+  this.css' %}({ display: '' });
 
   var options = this.layout.options;
 
@@ -1303,13 +1303,13 @@ proto.onHideTransitionEnd = function() {
   // check if still hidden
   // during transition, item may have been un-hidden
   if ( this.isHidden ) {
-    this.css({ display: 'none' });
+    this.css' %}({ display: 'none' });
     this.emitEvent('hide');
   }
 };
 
 proto.destroy = function() {
-  this.css({
+  this.css' %}({
     position: '',
     left: '',
     right: '',
@@ -2333,7 +2333,7 @@ proto.destroy = function() {
   // call super
   _destroy.apply( this, arguments );
   // reset display, #741
-  this.css({
+  this.css' %}({
     display: ''
   });
 };

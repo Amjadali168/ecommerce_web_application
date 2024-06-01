@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 
 from pathlib import Path
+from django.contrib import messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -38,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'ecomapp',
-    'auth',
+    'authcart',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +117,16 @@ USE_L10N = True
 USE_TZ = True
 
 
+#sending emails
+
+EMAIL_HOST ='smtp.secureserver.com'
+EMAIL_HOST_USER = 'a-5155@kmclu.ac.in'
+EMAIL_HOST_PASSWORD = 'Amjad@2407'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
@@ -128,3 +139,8 @@ STATICFILES_DIRS = [
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+MESSAGE_TAGS={
+    messages.ERROR:'danger'
+}

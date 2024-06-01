@@ -1,5 +1,36 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock title %}
+{% block content %}
+<h1>Welcome to Biggest sale of the year</h1>
+<!-- <div class="card bg-light p-5">
+    <h3 class="text-dark">Signup</h3>
+<form action="/auth/signup/" method="post">
+    {% csrf_token %}
+    <br>
+
+
+    <label for="email">Email</label>
+    <div class="form-group">
+        <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+    <label for="pass1">Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pass1" name="pass1" required>
+    </div>
+    <label for="pass2">Confirm Password</label>
+    <div class="form-group">
+        <input type="password" class="form-control" id="pass2" name="pass2" required>
+    </div>
+    <br>
+    <button type="submit" class="btn btn-dark">Sign In</button>
+
+    <br>
+    Already User? <a href="/auth/login">Log In</a>
+    <br>
+
+    </form>
+</div> -->
+{% endblock content %}
 {% block body %}
 <!-- ======= Portfolio Section ======= -->
 <section id="portfolio" class="portfolio">
@@ -26,11 +57,11 @@
         <div class="row portfolio-container">
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <img src="static/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>App 1</h4>
                     <p>App</p>
-                    <a href="static/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -38,11 +69,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <img src="static/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Web 3</h4>
                     <p>Web</p>
-                    <a href="static/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -50,11 +81,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <img src="static/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>App 2</h4>
                     <p>App</p>
-                    <a href="static/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -62,11 +93,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <img src="static/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Card 2</h4>
                     <p>Card</p>
-                    <a href="static/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -74,11 +105,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <img src="static/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Web 2</h4>
                     <p>Web</p>
-                    <a href="static/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -86,11 +117,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-                <img src="static/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>App 3</h4>
                     <p>App</p>
-                    <a href="static/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -98,11 +129,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <img src="static/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Card 1</h4>
                     <p>Card</p>
-                    <a href="static/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -110,11 +141,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-                <img src="static/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Card 3</h4>
                     <p>Card</p>
-                    <a href="static/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>
@@ -122,11 +153,11 @@
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-                <img src="static/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+                <img src="{% static '/assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
                 <div class="portfolio-info">
                     <h4>Web 3</h4>
                     <p>Web</p>
-                    <a href="static/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
+                    <a href="{% static '/assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery"
                         class="portfolio-lightbox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                     <a href="portfolio-details.html" class="details-link" title="More Details"><i
                             class="bx bx-link"></i></a>

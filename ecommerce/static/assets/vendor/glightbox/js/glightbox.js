@@ -41,9 +41,9 @@
       Object.defineProperty(target, _toPropertyKey(descriptor.key), descriptor);
     }
   }
-  function _createClass(Constructor, protoProps, staticProps) {
+  function _createClass(Constructor, protoProps, {% static 'Props) {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-    if (staticProps) _defineProperties(Constructor, staticProps);
+    if ({% static 'Props) _defineProperties(Constructor, {% static 'Props);
     Object.defineProperty(Constructor, "prototype", {
       writable: false
     });
@@ -344,9 +344,9 @@
       }, timeout);
     }
   }
-  function injectstatic/assets(url, waitFor, callback) {
+  function inject{% static '/assets(url, waitFor, callback) {
     if (isNil(url)) {
-      console.error('Inject static/assets error');
+      console.error('Inject {% static '/assets error');
       return;
     }
     if (isFunction(waitFor)) {
@@ -360,7 +360,7 @@
       return;
     }
     var found;
-    if (url.indexOf('.css') !== -1) {
+    if (url.indexOf('.css' %}') !== -1) {
       found = document.querySelectorAll('link[href="' + url + '"]');
       if (found && found.length > 0) {
         if (isFunction(callback)) {
@@ -944,12 +944,12 @@
     addClass(slideContainer, 'gvideo-container');
     slideMedia.insertBefore(createHTML('<div class="gvideo-wrapper"></div>'), slideMedia.firstChild);
     var videoWrapper = slide.querySelector('.gvideo-wrapper');
-    injectstatic/assets(this.settings.plyr.css, 'Plyr');
+    inject{% static '/assets(this.settings.plyr.css' %}, 'Plyr');
     var url = data.href;
     var provider = data === null || data === void 0 ? void 0 : data.videoProvider;
     var customPlaceholder = false;
     slideMedia.style.maxWidth = data.width;
-    injectstatic/assets(this.settings.plyr.js, 'Plyr', function () {
+    inject{% static '/assets(this.settings.plyr.js, 'Plyr', function () {
       if (!provider && url.match(/vimeo\.com\/([0-9]*)/)) {
         provider = 'vimeo';
       }
@@ -2077,7 +2077,7 @@
     closeOnOutsideClick: true,
     plugins: false,
     plyr: {
-      css: 'https://cdn.plyr.io/3.6.12/plyr.css',
+      css: 'https://cdn.plyr.io/3.6.12/plyr.css' %}',
       js: 'https://cdn.plyr.io/3.6.12/plyr.js',
       config: {
         ratio: '16:9',
@@ -2190,7 +2190,7 @@
           index = 0;
         }
         this.build();
-        animateElement(this.overlay, this.settings.openEffect === 'none' ? 'none' : this.settings.cssEfects.fade["in"]);
+        animateElement(this.overlay, this.settings.openEffect === 'none' ? 'none' : this.settings.css' %}Efects.fade["in"]);
         var body = document.body;
         var scrollBar = window.innerWidth - document.documentElement.clientWidth;
         if (scrollBar > 0) {
@@ -2452,7 +2452,7 @@
         }
         removeClass(slide, this.effectsClasses);
         if (first) {
-          animateElement(slide, this.settings.cssEfects[this.settings.openEffect]["in"], function () {
+          animateElement(slide, this.settings.css' %}Efects[this.settings.openEffect]["in"], function () {
             if (_this4.settings.autoplayVideos) {
               _this4.slidePlayerPlay(slide);
             }
@@ -2466,10 +2466,10 @@
           });
         } else {
           var effectName = this.settings.slideEffect;
-          var animIn = effectName !== 'none' ? this.settings.cssEfects[effectName]["in"] : effectName;
+          var animIn = effectName !== 'none' ? this.settings.css' %}Efects[effectName]["in"] : effectName;
           if (this.prevActiveSlideIndex > this.index) {
             if (this.settings.slideEffect == 'slide') {
-              animIn = this.settings.cssEfects.slideBack["in"];
+              animIn = this.settings.css' %}Efects.slideBack["in"];
             }
           }
           animateElement(slide, animIn, function () {
@@ -2500,7 +2500,7 @@
         removeClass(prevSlide, this.effectsClasses);
         addClass(prevSlide, 'prev');
         var animation = this.settings.slideEffect;
-        var animOut = animation !== 'none' ? this.settings.cssEfects[animation].out : animation;
+        var animOut = animation !== 'none' ? this.settings.css' %}Efects[animation].out : animation;
         this.slidePlayerPause(prevSlide);
         this.trigger('slide_before_change', {
           prev: {
@@ -2534,7 +2534,7 @@
           }]);
         }
         if (this.prevActiveSlideIndex > this.index && this.settings.slideEffect == 'slide') {
-          animOut = this.settings.cssEfects.slideBack.out;
+          animOut = this.settings.css' %}Efects.slideBack.out;
         }
         animateElement(prevSlide, animOut, function () {
           var container = prevSlide.querySelector('.ginner-container');
@@ -2742,9 +2742,9 @@
       key: "getAnimationClasses",
       value: function getAnimationClasses() {
         var effects = [];
-        for (var key in this.settings.cssEfects) {
-          if (this.settings.cssEfects.hasOwnProperty(key)) {
-            var effect = this.settings.cssEfects[key];
+        for (var key in this.settings.css' %}Efects) {
+          if (this.settings.css' %}Efects.hasOwnProperty(key)) {
+            var effect = this.settings.css' %}Efects[key];
             effects.push("g".concat(effect["in"]));
             effects.push("g".concat(effect.out));
           }
@@ -2987,8 +2987,8 @@
           });
         }
         addClass(this.modal, 'glightbox-closing');
-        animateElement(this.overlay, this.settings.openEffect == 'none' ? 'none' : this.settings.cssEfects.fade.out);
-        animateElement(this.activeSlide, this.settings.cssEfects[this.settings.closeEffect].out, function () {
+        animateElement(this.overlay, this.settings.openEffect == 'none' ? 'none' : this.settings.css' %}Efects.fade.out);
+        animateElement(this.activeSlide, this.settings.css' %}Efects[this.settings.closeEffect].out, function () {
           _this8.activeSlide = null;
           _this8.prevActiveSlideIndex = null;
           _this8.prevActiveSlide = null;

@@ -766,8 +766,8 @@
   --bs-focus-ring-color: rgba(var(--bs-dark-rgb), var(--bs-focus-ring-opacity));
 }
 
-.position-static {
-  position: static !important;
+.position-{% static ' {
+  position: {% static ' !important;
 }
 
 .position-relative {
@@ -5399,4 +5399,4 @@
   }
 }
 
-/*# sourceMappingURL=bootstrap-utilities.css.map */
+/*# sourceMappingURL=bootstrap-utilities.css' %}.map */

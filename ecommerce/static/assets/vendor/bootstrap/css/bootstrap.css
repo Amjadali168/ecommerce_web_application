@@ -4020,7 +4020,7 @@ textarea.form-control-lg {
   color: var(--bs-navbar-active-color);
 }
 .navbar-nav .dropdown-menu {
-  position: static;
+  position: {% static ';
 }
 
 .navbar-text {
@@ -4106,7 +4106,7 @@ textarea.form-control-lg {
     display: none;
   }
   .navbar-expand-sm .offcanvas {
-    position: static;
+    position: {% static ';
     z-index: auto;
     flex-grow: 1;
     width: auto !important;
@@ -4153,7 +4153,7 @@ textarea.form-control-lg {
     display: none;
   }
   .navbar-expand-md .offcanvas {
-    position: static;
+    position: {% static ';
     z-index: auto;
     flex-grow: 1;
     width: auto !important;
@@ -4200,7 +4200,7 @@ textarea.form-control-lg {
     display: none;
   }
   .navbar-expand-lg .offcanvas {
-    position: static;
+    position: {% static ';
     z-index: auto;
     flex-grow: 1;
     width: auto !important;
@@ -4247,7 +4247,7 @@ textarea.form-control-lg {
     display: none;
   }
   .navbar-expand-xl .offcanvas {
-    position: static;
+    position: {% static ';
     z-index: auto;
     flex-grow: 1;
     width: auto !important;
@@ -4294,7 +4294,7 @@ textarea.form-control-lg {
     display: none;
   }
   .navbar-expand-xxl .offcanvas {
-    position: static;
+    position: {% static ';
     z-index: auto;
     flex-grow: 1;
     width: auto !important;
@@ -4340,7 +4340,7 @@ textarea.form-control-lg {
   display: none;
 }
 .navbar-expand .offcanvas {
-  position: static;
+  position: {% static ';
   z-index: auto;
   flex-grow: 1;
   width: auto !important;
@@ -5521,7 +5521,7 @@ textarea.form-control-lg {
 .modal.show .modal-dialog {
   transform: none;
 }
-.modal.modal-static .modal-dialog {
+.modal.modal-{% static ' .modal-dialog {
   transform: scale(1.02);
 }
 
@@ -7421,8 +7421,8 @@ textarea.form-control-lg {
   --bs-focus-ring-color: rgba(var(--bs-dark-rgb), var(--bs-focus-ring-opacity));
 }
 
-.position-static {
-  position: static !important;
+.position-{% static ' {
+  position: {% static ' !important;
 }
 
 .position-relative {
@@ -12054,4 +12054,4 @@ textarea.form-control-lg {
   }
 }
 
-/*# sourceMappingURL=bootstrap.css.map */
+/*# sourceMappingURL=bootstrap.css' %}.map */
